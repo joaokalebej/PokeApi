@@ -1,0 +1,18 @@
+﻿@page
+@model IndexModel
+
+<h1>Pesquise um Pokémon</h1>
+<form method="get">
+    <label for="pokemonName">Nome do Pokémon:</label>
+    <input type="text" id="pokemonName" name="pokemonName" required />
+    <button type="submit">Buscar</button>
+</form>
+
+<h1>Informações do Pokémon</h1>
+
+@if (Model.PokemonInfo != null)
+{
+    <p>Nome: @Model.PokemonInfo.Name</p>
+    <p>Peso: @Model.PokemonInfo.Weight</p>
+    <p>Altura: @Model.PokemonInfo.Height</p>
+}
